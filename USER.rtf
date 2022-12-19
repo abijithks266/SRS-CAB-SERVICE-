@@ -1,0 +1,184 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 1. Introduction\par
+1. IntroductionTransportation plays an important role in both our personal life and in global economy. Proper system of transportation could have a great impact in industrial development. This project will make the system of accessing means of transportation much more simple and efficient. The alternative system requires the client to call up a company which then allocates a driver to the client. This can be further automated using an app to save time for both client and the company. First the client will book for service in the app, then the customer will be indicated on the map provided in drivers app, a driver can choose between multiple customers in different locations in a manner that minimizes un-fared travelling. After completing the service a fare amount will be calculated and provided to client, which they would be required to pay through means of e-wallet orcash.\par
+1.1 Purpose The purpose of this SRS document (version 1.0) is to specify the software requirements of the Online Taxi Booking platform. It will be a complete specification of what this system provides at both client and driver end.1.2 Document ConventionsEvery requirement is given its own priority. Font Size 12, Times New Roman, Line spacing \par
+1.0.1.3 Intended Audience and Reading SuggestionsThe SRS document is intended to be read by every department (HR, Marketing, Technical and other) to provide a clear idea of the features provided in this project. To make the ideas conceivable for employee in different department, the report would use basic language without going into detailed technical details.\par
+1.4 Product ScopeThe projects aim is to automate the system of hiring a driver by calculating and collecting fare by the means of the app. The app also to collect and process information regarding the client to optimize quality of service. The app would also collect and store data of registered users in database.It transforms current system to a centralized. \f1\par
+\f0\fs28 1.Registration Page\par
+1.1 user must fill a detailed form to register for services.it should include [ user details component ]\par
+\tab > [phone number] refered as foreign key\par
+\tab >OTP is send to the phone number and verified.\par
+\tab > First Name *[ required min length 1, maxlength (20) ]*\par
+\tab > Last Name *[cannot contain numbers , maxlength (20)]*\par
+\tab >Email*[should be in email format,and should be unique]* \par
+\tab > date of birth [ date ] [required] \par
+\tab > Gender [ dropdown (male,female,other) ][required]\par
+\tab > Place[required] [max length(25)]\par
+\tab > Pincode [number ] [6 digits min & max]\par
+\tab > Emergency Contact Number [10 digits]\par
+\tab > Blood Group[ drop down ]\par
+\tab >Password *[required][minlength(6) include special ACharacters, \tab Uppercase & Lower Case & Number]*\par
+\tab > Confirm password \par
+\tab >OTP should be sent to the mail or phone number and the mail or \tab\tab   phone number should be verified and a \par
+\tab  >new account with user name as either phone number or email is \tab  \tab\tab created.\par
+\par
+\fs22 user login\par
+\fs28 1.1  user should be able to register providing\par
+\par
+\tab 1.1.1 Email   *[unique] [ validation for email]*\par
+\tab  1.1.2 `Phone Number` *[Unique] [ maximum of 10 numbers ]* + [country code] [ **referd in requiremtnt 1.2**  ]\par
+\tab 1.1.3 `password` *[required][minlength(6) include special ACharacters, Uppercase & Lower Case & Number]*\par
+\tab  1.1.4 `Confirm password`  \par
+\par
+\fs22\par
+\par
+User Home page\par
+\par
+FN-2: Request for rides\par
+\par
+FN-3: Enter their destination to help in estimating the fare\par
+\par
+FN-4: View the available drivers, their information and the details of the car they drive\par
+\par
+FN-5: Cancel trips if necessary\par
+\par
+FN-6: Rate and add a tip for the driver if the service was great\par
+\par
+FN-7: View price estimates\par
+\par
+FN-8: Schedule a ride in advance\par
+\par
+FN-9: Synchronize meetings using calendar shortcuts\par
+\par
+FN-10: Add multiple drop-off points\par
+\par
+FN-11: Make payment for the trip they took\par
+\par
+Drivers are able to do the following functions:\par
+\par
+FN-12: Access maps and locations\par
+\par
+FN-13: View requested rides from the riders\par
+\par
+FN-14: Leave ratings and reviews within the system\par
+\par
+FN-15: Picks up and takes the riders to their destinations\par
+\par
+FN-16: Set the profile information\par
+\par
+\par
+\fs28 Cab master details shall be captured\par
+4.1 Adminstrator should be able to add a drivers providing following details.  \par
+\par
+> first name\par
+>last name\par
+>gender\par
+>license number\par
+>police clearance certificate\par
+>years of experiance\par
+>contact number\par
+>dob\par
+>availability\par
+>vehicle mode\par
+>vehicle number\par
+>vehicle insurance number\par
+>vehicle contact certificate\par
+\par
+\par
+> *[should be stored in the database with role driver]* \par
+> email [ email is unique] \par
+> password\par
+> Confirm Passowrd\par
+\par
+\par
+\par
+5.Driver login page \par
+\par
+>  Driver user id given by admin\par
+>driver Password \par
+>OTP to the registerd mobile number\par
+\par
+Driver Home Page\par
+\par
+>4.3 The driver should be able to give his current location\par
+>4.4 he should be able to see customer requests and their location\par
+>4.4 if a customer picks him there should be an option for accepting the customer request or regecting it.\par
+>4.5 if accepted then the driver is given customer location name and phone number\par
+>4.6 if the driver is given certain instruction by the customer then he should be able to get that\par
+\par
+\par
+Admin login page\par
+\par
+>an admin login page is created which is only accesseble to client side\par
+>admin used id\par
+>admin password\par
+Admin Home Page\par
+> Admin can access User detials\par
+> admin can access Cab master detials\par
+>admin can acess cab shedule detials \par
+>admin can access cab fare detials\par
+>admin can modify cab fare detials\par
+>admin can modify cab shedule detials \par
+>admin can block user \par
+>admin can block cab master\par
+\par
+Cab search facility\par
+search filtered basis of availability and nearby location\par
+ Result should be available in a  sorted  way\par
+\tab diffrent types of sorting and filtering can be applied by the user [fare,rating,time,experience]\par
+\tab result raw should include view Details button along with cab driver name vehicle number , location of the vehicle and vehicle model.\par
+  details tab should include  avatar, drivers name , gender, years of experience ,contact number, availability ,rating, time to reach, fare[ go back button shows results table ]\par
+\par
+Cab schedule details with fare shall be maintained\par
+>admin is given a field to add diffrent sources\par
+>admin is given field to add diffrent destinations\par
+>admin is asked to enter the fare between these sources and destinations\par
+>a fare detials chart is created\par
+\par
+Cab ticket booking details with tax shall be stored\par
+>a booking page is created\par
+>Once user selects the source, destination and the cab cab ticket booking is initiallized\par
+>the fare based on the user is created\par
+>Tax is added with the fare\par
+>Payment option (upi,card,netbanking,cash)\par
+>Confirm the booking of the vehicle\par
+>Cancel option is given\par
+>Once its is confirmed payment page is initialization\par
+\par
+6. Cab ticket booking details with tax shall be stored:\par
+After Succesfull booking redirect to payment page / the page should contain current booking details with additional details such as:\par
+Fare [ Adjusted for peakhour ]\par
+Tax\par
+Payment Options [upi,card]\par
+Confirm Booking ('succesfull payment should redirect user to bookings Home`)\par
+Home should display current booking at top of bookings table along with the cancel & Edit Booking option.\par
+Cancel and edit option must be disabled after reacing the destination\par
+Booking Status Should be maintained [reached][not reached] [parked]\par
+\par
+ \par
+\par
+7. Payment shall be collected and invoice shall be given to the Customer:\par
+7.1 able to issue an invoice [ vehicle reg number][price]     [tax] [net price] [cofirmation message]\par
+7.2 payment option additional by cash facility.\par
+7.3 print bill\par
+\par
+ \par
+\par
+8. Feedback shall be collected:\par
+8.1 able to provide rating for driver as well as overall     services\par
+8.2 admin should be able to see feedbacks along with     passenger name\par
+\par
+\par
+\par
+\par
+\par
+\fs22\par
+\par
+\par
+\par
+\par
+\par
+2\par
+}
+ 
